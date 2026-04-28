@@ -1,0 +1,74 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+    text-decoration: none;
+    font-family: "Poppins", sans-serif;
+}
+
+html::selection{
+    background-color: white;
+    color: #800b0b;
+}
+
+body{
+    min-height: 100vh;
+    background-image: linear-gradient(to bottom, #800b0b, #e80c0c);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+}
+
+.start{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 500px;
+
+    .start_bottom--icon{
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        font-size: 40px;
+        color: white;
+        cursor: pointer;
+    }
+
+    .start_hero h1{
+        font-weight: 900;
+        font-size: 72px;
+        white-space: wrap;
+        width: 1000px;
+    }
+}
+
+.start {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 500px;
+    position: relative; /* İçerideki elemanları hizalamak için */
+    overflow: hidden;    /* Kayma sırasında taşmayı gizlemek için */
+}
+
+.start_hero {
+    position: absolute; /* Slaytların üst üste binmesini sağlar */
+    width: 1000px;
+    text-align: center;
+}
+
+.start_hero h1 {
+    font-weight: 900;
+    font-size: 72px;
+    white-space: wrap;
+}
+
+/* İkonların çakışmaması için sol oku biraz sola kaydırdık */
+.start_bottom--icon.prev {
+    right: 80px; 
+}
+
+

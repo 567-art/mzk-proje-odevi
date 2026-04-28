@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Türk Müziği Makamları Sunumu</title>
+
+    <!-- 1. FONT CDN (Senin verdiğin çalışan link) -->
+    <link href="https://fonts.cdnfonts.com/css/poppins" rel="stylesheet">
+
+
+    <!-- 2. İKONLAR (Font Awesome - DOĞRU DOSYA YOLU) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- 3. JQUERY (Senin verdiğin çalışan link) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background: linear-gradient(to bottom, #800b0b, #e80c0c);
+            color: white;
+            overflow: hidden;
+        }
+
+        .presentation-container {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .slide {
+            position: absolute;
+            width: 1000px;
+            text-align: center;
+            display: none;
+            opacity: 0;
+        }
+
+        .slide.active {
+            display: block;
+            opacity: 1;
+        }
+
+        .slide h1 {
+            font-weight: 900;
+            font-size: 64px;
+            line-height: 1.2;
+        }
+
+        .nav-buttons {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            display: flex;
+            gap: 20px;
+            z-index: 100;
+        }
+
+        .nav-btn {
+            font-size: 40px;
+            color: rgba(255, 255, 255, 0.7);
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .nav-btn:hover {
+            color: white;
+            transform: scale(1.1);
+        }
+
+        .slide-number {
+            position: fixed;
+            bottom: 40px;
+            left: 40px;
+            font-size: 18px;
+            opacity: 0.5;
+        }
+
+        .slide[data-id="2"] ul li a,
+        .slide[data-id="3"] ul li a {
+            all: unset;
+            cursor: pointer;
+
+            &:hover {
+                opacity: 0.7;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="presentation-container">
+        <div class="slide active" data-id="0">
+            <h1>TÜRK MÜZİĞİ MAKAMLARININ GÜNÜMÜZ POPÜLER MÜZİKLERİNDE KULLANIMI</h1>
+        </div>
+
+        <div class="slide" data-id="1">
+            <h1>ÖRNEK MAKAMLAR</h1>
+            <br><br>
+            <ul style="list-style-type: none; text-align: left;">
+                <li><b>Kurdi:</b> Genellikle Pop müzik tarzında tercih edilir çünkü batı minör
+                    gamına yakın olduğu
+                    içindir.</li><br>
+                <li><b>Nihavent:</b> Neşeli ve Hüzünlü temalarda tercih edilir. Aynı şekilde, Pop
+                    müzikte kullanımı
+                    vardır.</li> <br>
+                <li><b>Hicaz:</b> Ortadoğu tınıları taşıyan, mistik ve içli bir yapıya sahiptir.
+                    Özellikle arabesk-pop
+                    tarzındaki şarkılarda veya pop şarkılarının nakarat bölümlerinde güçlü bir etki bırakmak için
+                    kullanılır.</li> <br>
+                <li><b>Uşşak: </b> Özellikle ayak ağrıları ve uykusuzluğa iyi geldiği (geleneksel müzikle tedavi)
+                    inancının yanı sıra, halk müziği kökenli pop eserlerinde sıkça rastlanan, hüzünlü ancak akıcı bir
+                    makamdır. Bence, bu makam ayrıca tiz perdelere de çıkar.</li> <br>
+                <li><b>Muayyer-Kurdî: </b> Özellikle 90'lı yıllardan itibaren pop müzikte hüzünlü ve etkileyici slow
+                    şarkıların temelini oluşturmuştur. </li>
+            </ul>
+        </div>
+
+        <div class="slide" data-id="2">
+            <h1>ŞARKI ÖRNEKLERİ</h1>
+
+            <br><br>
+            <ul style="list-style-type: none; text-align: left;">
+                <li><a href="https://music.youtube.com/watch?v=vudLXNM1uX0" target="_blank"><i
+                            class="fa-brands fa-youtube"></i> &nbsp; <b>Sertab Erener – Kumsalda,</b></a>
+                    Şarkının genel melodisi
+                    ve altyapısı Hicaz makamının tipik özelliklerini taşır.</li><br>
+                <li><a href="https://music.youtube.com/watch?v=g1vCetSh7js" target="_blank"><i
+                            class="fa-brands fa-youtube"></i> &nbsp; <b>Sezen Aksu – Sitem,</b></a> "Sitem"
+                    şarkısı, Hicaz makamının hüzünlü ve etkileyici yapısını modern bir pop formunda sunar.</li><br>
+                <li><a href="https://music.youtube.com/watch?v=6ZK8Is46A6k" target="_blank"><i
+                            class="fa-brands fa-youtube"></i> &nbsp; <b>Kayahan – Gönül Sayfam,</b></a> Türk
+                    popunun bu klasikleşmiş parçası Hicaz makamında bestelenmiştir.</li><br>
+                <li><a href="https://music.youtube.com/watch?v=c3SGgWR2XkE&si=KdxrrqeCCmxR_yn1" target="_blank"><i
+                            class="fa-brands fa-youtube"></i> &nbsp; <b>Selda Bağcan / Edip Akbayram – Aldırma
+                            Gönül,</b></a> Anadolu Rock ve Protest müziğin en bilinen örneklerinden olan bu eser Hicaz
+                    makamındadır.</li><br>
+                <li><a href="https://music.youtube.com/watch?v=_XsHY1cK1l0" target="_blank"><i
+                            class="fa-brands fa-youtube"></i> &nbsp; <b>Sezen Aksu – Belalım,</b></a> Kürdî
+                    makamının o ağır ve derin hüznünü en iyi yansıtan şarkılardan biridir.</li><br>
+
+                <li><a href="https://music.youtube.com/watch?v=qGEYAUE7EpE&si=hnPrTQkn1_1XlQ6G" target="_blank"><i
+                            class="fa-brands fa-youtube"></i> &nbsp; <b>Ajda Pekkan – Bir Günah Gibi,</b></a>
+                    Modern bir düzenlemeye sahip olsa da melodi yapısı Kürdî (veya Muhayyerkürdî) etkilerini taşır.</li>
+                <br>
+                <li><a href="https://music.youtube.com/watch?v=7p2l4LBOGvo" target="_blank"><i
+                            class="fa-brands fa-youtube"></i> &nbsp; <b>Tarkan – Hatıram Olsun,</b></a> Özellikle
+                    90'lı yılların pop hitlerinde Kürdî makamının kullanımı bu şarkıda net bir şekilde görülür.</li><br>
+
+                <li><a href="https://music.youtube.com/watch?v=A6lKgpbrIyw" target="_blank"><i
+                            class="fa-brands fa-youtube"></i> &nbsp; <b>Teoman – İstanbul'da Sonbahar,</b></a>
+                    Teoman'ın bu ünlü şarkısı, Nihavend makamının o melankolik ve modern şehirli havasına mükemmel bir
+                    örnektir.
+                </li><br>
+                <!-- <li><a href="#"><i class="fa-brands fa-youtube"></i> &nbsp; <b>x,</b></a> y</li><br> -->
+            </ul>
+
+        </div>
+
+        <div class="slide" data-id="3">
+            <h1>DAHA FAZLA ÖRNEK</h1>
+            <br><br>
+
+            <ul style="list-style-type:none; text-align: left">
+                <li><a href="https://music.youtube.com/podcast/VVLX530tS-Q" target="_blank"><i
+                            class="fa-brands fa-youtube"></i>&nbsp;<b>Melihat Gülses – Şarkılar Seni Söyler,</b></a>
+                    Klasik bir Nihavend eser olmasına rağmen, popüler kültürde ve konserlerde pop şarkıcıları
+                    tarafından sıkça icra edilir</li>
+                <li><a href="https://music.youtube.com/watch?v=zd8IFDgQCUc" target="_blank"><i
+                            class="fa-brands fa-youtube"></i>&nbsp;<b>Barış Manço – Gülpembe, </b></a> Manço'nun bu
+                    efsanevi şarkısı Uşşak makamının duygusal derinliğini rock altyapısıyla birleştirir</li>
+            </ul>
+
+            <br><br>
+
+            <h1>Velhasıl Kelam,</h1>
+            <p>
+                Birçok müzikle beraber, bu makamlar kullanılmakta. Popüler müzik dedik ama verdiğimiz örnekler pek de
+                popüler değil. En azından gençler arasında öyle. Tabii şu an genel olarak hilt olmuş eserlere bakarsak,
+                makamın M'sini bile göremeyiz;
+            </p><br>
+
+            <p>
+                Örnek olarak <b>LVBEL C5 - HAV HAV</b>. Tabii <b>Kabede Hacılar Hu Der Allah</b> isimli hilt eser, bir
+                ilahi olduğundan dolayı, makam aramak daha olasıdır.
+            </p><br>
+
+            <p>
+                Şu da unutulmamalıdır ki, ben sadece bir öğrenciyim. Yani potansiyelimi zorlasam, üç aşağı beş yukarı
+                aynı şey çıkardı.
+            </p>
+        </div>
+
+    </div>
+
+    <div class="slide-number">1 / 4</div>
+
+    <div class="nav-buttons">
+        <i class="fa-solid fa-chevron-left nav-btn" id="prevBtn"></i>
+        <i class="fa-solid fa-chevron-right nav-btn" id="nextBtn"></i>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            let currentId = 0;
+            const slides = $(".slide");
+            const totalSlides = slides.length;
+
+            function updateSlideNumber() {
+                $(".slide-number").text((currentId + 1) + " / " + totalSlides);
+            }
+
+            function moveSlide(nextId, direction) {
+                const currentSlide = $(`.slide[data-id="${currentId}"]`);
+                const nextSlide = $(`.slide[data-id="${nextId}"]`);
+
+                let outX = direction === "next" ? "-100%" : "100%";
+                let inX = direction === "next" ? "100%" : "-100%";
+
+                currentSlide.animate({ marginLeft: outX, opacity: 0 }, 500, function () {
+                    $(this).removeClass("active").hide().css({ marginLeft: 0 });
+                });
+
+                nextSlide.css({ display: "block", marginLeft: inX, opacity: 0 })
+                    .addClass("active")
+                    .animate({ marginLeft: "0%", opacity: 1 }, 500);
+
+                currentId = nextId;
+                updateSlideNumber();
+            }
+
+            $("#nextBtn").click(function () {
+                if (currentId < totalSlides - 1) {
+                    moveSlide(currentId + 1, "next");
+                }
+            });
+
+            $("#prevBtn").click(function () {
+                if (currentId > 0) {
+                    moveSlide(currentId - 1, "prev");
+                }
+            });
+
+            $(document).keydown(function (e) {
+                if (e.which == 39) $("#nextBtn").click();
+                if (e.which == 37) $("#prevBtn").click();
+            });
+        });
+    </script>
+
+</body>
+
+</html>
