@@ -33,11 +33,16 @@
             overflow: hidden;
         }
 
-        html::selection, html::-moz-selection{
-            background-color: white;
-            color: #800b0b;
+              ::selection {
+    background-color: white;
+    color: #800b0b;
+}
+/* Firefox için */
+::-moz-selection {
+    background-color: white;
+    color: #800b0b;
+}
 
-        }
 
         .presentation-container {
             position: relative;
